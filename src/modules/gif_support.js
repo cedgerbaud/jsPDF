@@ -15,6 +15,8 @@
 (function (jsPDFAPI) {
 	'use strict';
 
+	const GifReader = require('omggif')
+
 	jsPDFAPI.processGIF89A = function (imageData, imageIndex, alias, compression, dataAsBinaryString) {
 		var reader = new GifReader(imageData);
 		var width = reader.width, height = reader.height;

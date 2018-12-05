@@ -26,6 +26,7 @@
     "html2canvas": "1.0.0-alpha.12",
     "omggif": "1.0.7",
     "promise-polyfill": "8.1.0",
+    "rollup-plugin-commonjs": "^9.2.0",
     "stackblur-canvas": "2.1.0"
   },
   "devDependencies": {

@@ -248,15 +248,15 @@
 		}
 	}
 
-    // export as AMD...
-    if ( typeof define !== 'undefined' && define.amd ) {
-        define('RGBColor', function () { return RGBColor; });
-    }
+    // // export as AMD...
+    // if ( typeof define !== 'undefined' && define.amd ) {
+    //     define('RGBColor', function () { return RGBColor; });
+    // }
 
-    // ...or as browserify
-    else if (typeof module !== 'undefined' && module.exports ) {
-        module.exports = RGBColor;
-    }
+    // // ...or as browserify
+    // else if (typeof module !== 'undefined' && module.exports ) {
+    //     module.exports = RGBColor;
+    // }
 
     global.RGBColor = RGBColor;
 	

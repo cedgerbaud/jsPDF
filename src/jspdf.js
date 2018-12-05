@@ -20,7 +20,7 @@
  * }
  * ```
  */
-var jsPDF = (function (global) {
+// var jsPDF = (function (global) {
   'use strict';
 
   /**
@@ -3256,19 +3256,20 @@ var jsPDF = (function (global) {
    * @memberOf jsPDF
    */
   jsPDF.version = ("${versionID}" === ("${vers" + "ionID}")) ? "0.0.0" : "${versionID}";
-
-  if (typeof define === 'function' && define.amd) {
-    define('jsPDF', function () {
-      return jsPDF;
-    });
-  } else if (typeof module !== 'undefined' && module.exports) {
-    module.exports = jsPDF;
-    module.exports.jsPDF = jsPDF;
-  } else {
-    global.jsPDF = jsPDF;
-  }
-  return jsPDF;
-}(typeof self !== "undefined" && self || typeof window !== "undefined" && window || typeof global !== "undefined" && global || Function('return typeof this === "object" && this.content')() || Function('return this')()));
+module.exports = jsPDF
+global.jsPDF = jsPDF
+  // if (typeof define === 'function' && define.amd) {
+  //   define('jsPDF', function () {
+  //     return jsPDF;
+  //   });
+  // } else if (typeof module !== 'undefined' && module.exports) {
+  //   module.exports = jsPDF;
+  //   module.exports.jsPDF = jsPDF;
+  // } else {
+  //   global.jsPDF = jsPDF;
+  // }
+  // return jsPDF;
+// }(typeof self !== "undefined" && self || typeof window !== "undefined" && window || typeof global !== "undefined" && global || Function('return typeof this === "object" && this.content')() || Function('return this')()));
 // `self` is undefined in Firefox for Android content script context
 // while `this` is nsIContentFrameMessageManager
 // with an attribute `content` that corresponds to the window

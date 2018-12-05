@@ -276,6 +276,8 @@ BmpDecoder.prototype.getData = function() {
   return this.data;
 };
 
+global.BmpDecoder = BmpDecoder
+
 try { 
 	module.exports = function(bmpData) {
 		  var decoder = new BmpDecoder(bmpData);
